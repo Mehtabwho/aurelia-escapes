@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "motion/react";
 import { ArrowLeft, X } from "lucide-react";
-import { getRoom, rooms } from "@/data/rooms";
+import { getRoom, rooms, type Room } from "@/data/rooms";
 import { BookingWidget } from "@/components/site/BookingWidget";
 import { Reveal } from "@/components/site/Reveal";
 
@@ -43,7 +43,7 @@ function RoomNotFound() {
 }
 
 function RoomDetail() {
-  const { room } = Route.useLoaderData();
+  const { room } = Route.useLoaderData() as { room: Room };
   const [lightbox, setLightbox] = useState<number | null>(null);
   const others = rooms.filter((item) => item.slug !== room.slug).slice(0, 2);
 
