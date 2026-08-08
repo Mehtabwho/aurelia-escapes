@@ -1,24 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/site/Hero";
+import { Intro } from "@/components/site/Intro";
+import { ExperienceSection } from "@/components/site/ExperienceSection";
+import { RoomsPreview } from "@/components/site/RoomsPreview";
+import { DiningSection } from "@/components/site/DiningSection";
+import { Wellness } from "@/components/site/Wellness";
+import { Destination } from "@/components/site/Destination";
+import { JournalPreview } from "@/components/site/JournalPreview";
+import { Testimonials } from "@/components/site/Testimonials";
+import { FinalCta } from "@/components/site/FinalCta";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "AURELIA — Stay somewhere worth remembering" },
+      {
+        name: "description",
+        content:
+          "A boutique retreat of eleven rooms between mountain and sea: slow mornings, seasonal dining, wellness rituals and hidden trails.",
+      },
+      { property: "og:title", content: "AURELIA — Stay somewhere worth remembering" },
+      {
+        property: "og:description",
+        content: "A boutique retreat between nature and stillness.",
+      },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Hero />
+      <Intro />
+      <ExperienceSection />
+      <RoomsPreview />
+      <DiningSection />
+      <Wellness />
+      <Destination />
+      <JournalPreview />
+      <Testimonials />
+      <FinalCta />
+    </>
   );
 }

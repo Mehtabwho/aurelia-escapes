@@ -10,33 +10,73 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DiningRouteImport } from './routes/dining'
+import { Route as ExperienceRouteImport } from './routes/experience'
+import { Route as StayIndexRouteImport } from './routes/stay.index'
+import { Route as StaySlugRouteImport } from './routes/stay.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DiningRoute = DiningRouteImport.update({
+  id: '/dining',
+  path: '/dining',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperienceRoute = ExperienceRouteImport.update({
+  id: '/experience',
+  path: '/experience',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StayIndexRoute = StayIndexRouteImport.update({
+  id: '/stay/',
+  path: '/stay/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StaySlugRoute = StaySlugRouteImport.update({
+  id: '/stay/$slug',
+  path: '/stay/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/dining': typeof DiningRoute
+  '/experience': typeof ExperienceRoute
+  '/stay/$slug': typeof StaySlugRoute
+  '/stay/': typeof StayIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/dining': typeof DiningRoute
+  '/experience': typeof ExperienceRoute
+  '/stay/$slug': typeof StaySlugRoute
+  '/stay': typeof StayIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/dining': typeof DiningRoute
+  '/experience': typeof ExperienceRoute
+  '/stay/$slug': typeof StaySlugRoute
+  '/stay/': typeof StayIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/dining' | '/experience' | '/stay/$slug' | '/stay/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/dining' | '/experience' | '/stay/$slug' | '/stay'
+  id: '__root__' | '/' | '/dining' | '/experience' | '/stay/$slug' | '/stay/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DiningRoute: typeof DiningRoute
+  ExperienceRoute: typeof ExperienceRoute
+  StaySlugRoute: typeof StaySlugRoute
+  StayIndexRoute: typeof StayIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +88,44 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dining': {
+      id: '/dining'
+      path: '/dining'
+      fullPath: '/dining'
+      preLoaderRoute: typeof DiningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experience': {
+      id: '/experience'
+      path: '/experience'
+      fullPath: '/experience'
+      preLoaderRoute: typeof ExperienceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stay/': {
+      id: '/stay/'
+      path: '/stay'
+      fullPath: '/stay/'
+      preLoaderRoute: typeof StayIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stay/$slug': {
+      id: '/stay/$slug'
+      path: '/stay/$slug'
+      fullPath: '/stay/$slug'
+      preLoaderRoute: typeof StaySlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DiningRoute: DiningRoute,
+  ExperienceRoute: ExperienceRoute,
+  StaySlugRoute: StaySlugRoute,
+  StayIndexRoute: StayIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
