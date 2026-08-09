@@ -1,706 +1,114 @@
-# AURELIA Digital Retreat
+# AURELIA — Boutique Retreat
 
-# Build Brief — AURELIA Boutique Retreat
+> **Stay somewhere worth remembering.**
 
-Create a premium, cinematic boutique hotel and travel experience website called **AURELIA — Boutique Retreat**.
+AURELIA is a cinematic boutique retreat website designed as a premium digital travel experience. The project combines luxury hospitality aesthetics with editorial-inspired layouts, immersive imagery, smooth animations, and responsive frontend development.
 
-The website should feel like a combination of a **high-end luxury hotel website, travel editorial magazine, and modern award-winning creative agency website**.
+Rather than following the conventions of a typical hotel booking website, AURELIA focuses on **visual storytelling, typography, interaction design, and attention to detail**.
 
-The primary goal is NOT to create a typical hotel booking website. The goal is to create a **visually exceptional portfolio project** that demonstrates strong frontend development, UI/UX design, typography, responsive design, micro-interactions, animation, image composition, and attention to detail.
+##  Highlights
 
----
+* Cinematic full-screen hero experience
+* Editorial-inspired luxury design
+* Responsive layouts across desktop, tablet, and mobile
+* Interactive rooms and suites
+* Room detail pages with mock availability booking
+* Dining, wellness, destination, and journal sections
+* Smooth scroll and page transitions
+* Scroll-triggered animations and image reveals
+* Interactive experience galleries
+* Custom desktop cursor interactions
+* Mobile-friendly navigation
+* Reusable React components
+* Frontend-only booking experience
 
-# 1. Brand Concept
+##  Design
 
-### Brand Name
-
-**AURELIA**
-
-### Tagline
-
-**Stay somewhere worth remembering.**
-
-### Concept
-
-AURELIA is a fictional boutique retreat surrounded by dramatic natural landscapes. The location should feel intentionally ambiguous between a tropical island and a secluded mountain destination so the design remains timeless.
-
-The brand represents:
-
-* Slow living
-* Nature
-* Luxury
-* Privacy
-* Architecture
-* Wellness
-* Fine dining
-* Meaningful travel
-
-The experience should feel **quiet, sophisticated, cinematic, intimate, and premium**.
-
-Avoid anything that looks like a generic travel booking platform.
-
----
-
-# 2. Visual Direction
-
-Use a sophisticated editorial aesthetic.
+AURELIA uses a warm, sophisticated visual language inspired by luxury travel and contemporary editorial design.
 
 ### Color Palette
 
-Primary:
+* Warm Ivory
+* Soft Sand
+* Deep Charcoal
+* Muted Olive
+* Warm Stone
+* Subtle Gold Accents
 
-* Warm ivory / cream
-* Soft sand
-* Deep charcoal
-* Muted olive green
-* Warm stone
-* Very subtle gold/brass accents
+### Typography
 
-Suggested colors:
+The design combines an elegant serif display typeface with a clean modern sans-serif to create strong editorial contrast and hierarchy.
 
-```text
-Background: #F4F0E8
-Secondary background: #E8E2D7
-Dark text: #20211D
-Muted text: #73746C
-Olive: #69705A
-Deep olive: #343A2D
-Accent: #B49A6A
-White: #FFFFFF
-```
+The overall visual direction emphasizes:
 
-Do NOT use:
+**Typography · Photography · Whitespace · Composition · Motion**
 
-* Bright gradients
-* Neon colors
-* Excessive shadows
-* Generic blue hotel colors
-* Overly rounded SaaS-style cards
-* Excessive glassmorphism
+##  Main Sections
 
-Use generous whitespace.
+### Hero
 
----
+A full-screen cinematic introduction featuring the AURELIA brand, tagline, atmospheric imagery, and primary CTA.
 
-# 3. Typography
+### The Retreat
 
-Use a combination of:
+An editorial introduction to the property using asymmetric image compositions and subtle scroll movement.
 
-### Display font
+### The Experience
 
-A sophisticated serif such as:
+Interactive experiences covering:
 
-* Cormorant Garamond
-* Playfair Display
-* DM Serif Display
+* Stay
+* Dine
+* Restore
+* Explore
 
-### Body font
+### Rooms & Suites
 
-A clean modern sans-serif such as:
+Image-led accommodation displays featuring:
 
-* Inter
-* Manrope
-* Plus Jakarta Sans
+* Garden Suite
+* Ocean Villa
+* Horizon Residence
 
-Typography should be a major part of the visual identity.
+Each room includes details such as size, bed type, capacity, amenities, and a mock booking interaction.
 
-Use:
+### Dining
 
-* Very large editorial headlines
-* Small uppercase labels
-* Wide letter spacing for navigation
-* Elegant serif section titles
-* Strong contrast between serif and sans-serif typography
+A visual presentation of the restaurant, seasonal cuisine, interiors, and dining experience.
 
-The typography should feel similar to a luxury fashion/editorial publication.
+### Wellness
 
----
+A calm, immersive section highlighting wellness experiences such as yoga, meditation, massage, and private rituals.
 
-# 4. Navigation
+### Destination
 
-Create a minimal fixed/sticky navigation.
+An interactive exploration section featuring destinations and experiences surrounding the retreat.
 
-Desktop:
+### Journal
 
-```text
-AURELIA          STAY   EXPERIENCE   DINING   JOURNAL        BOOK
-```
+An editorial-style collection of travel and lifestyle stories.
 
-The navigation should initially be transparent over the hero.
+### Testimonials
 
-As the user scrolls:
+A minimal full-width testimonial section designed to maintain the site's editorial aesthetic.
 
-* Background transitions into warm ivory
-* Text changes to dark charcoal
-* Subtle bottom border appears
+### Final CTA
 
-Logo should be text-based:
+A cinematic closing section encouraging visitors to plan their stay.
 
-**AURELIA**
+## 🛠️ Tech Stack
 
-with:
+* **React**
+* **Vite**
+* **Tailwind CSS**
+* **Framer Motion**
+* **React Router**
+* **Lucide React**
 
-**BOUTIQUE RETREAT**
-
-in tiny uppercase lettering beneath it.
-
-Mobile navigation should become a minimal hamburger menu with a smooth fullscreen menu animation.
-
----
-
-# 5. HERO SECTION
-
-Create a full-screen cinematic hero.
-
-Use a large high-quality landscape image of a luxury retreat surrounded by nature.
-
-Hero layout:
-
-```text
-                         AURELIA
-                    BOUTIQUE RETREAT
-
-                STAY SOMEWHERE
-                WORTH REMEMBERING.
-
-                [ EXPLORE THE RETREAT ]
-
-                         ↓
-```
-
-The image should occupy the entire viewport.
-
-Add a subtle dark overlay so text remains readable.
-
-### Hero animation
-
-On page load:
-
-1. Background image slowly scales from approximately 1.08 to 1.0.
-2. Main heading fades upward.
-3. Subtitle appears with a slight delay.
-4. CTA fades in.
-5. Navigation smoothly appears.
-6. A small scroll indicator gently moves vertically.
-
-Do NOT make the animation fast or flashy.
-
-Everything should feel slow and cinematic.
-
----
-
-# 6. INTRODUCTION SECTION
-
-After the hero, create a large editorial section.
-
-Small label:
-
-**01 — THE RETREAT**
-
-Large serif headline:
-
-**A place between
-nature and stillness.**
-
-Supporting text:
-
-AURELIA is designed for travelers who want to step away from the noise and reconnect with what matters.
-
-Include a large asymmetric image composition.
-
-Layout should NOT be a standard 50/50 grid.
-
-Use:
-
-* One large image
-* One smaller overlapping image
-* Text positioned between or beside them
-
-Add subtle scroll-based movement.
-
----
-
-# 7. THE EXPERIENCE
-
-Create a horizontal or editorial experience section.
-
-Heading:
-
-**The Experience**
-
-Small description:
-
-**A slower way to see the world.**
-
-Create four experiences:
-
-```text
-01
-STAY
-
-Private spaces designed
-around light, silence and nature.
-
-
-02
-DINE
-
-Seasonal ingredients.
-Unhurried evenings.
-
-
-03
-RESTORE
-
-Wellness rituals inspired
-by the surrounding landscape.
-
-
-04
-EXPLORE
-
-Hidden trails, quiet beaches
-and unforgettable horizons.
-```
-
-Each experience should have an image.
-
-On desktop, use an interactive horizontal gallery.
-
-As the user scrolls horizontally:
-
-* Images transition smoothly
-* Text changes
-* Number indicator changes
-* Active item becomes visually emphasized
-
-On mobile, convert this into a vertical scroll-based experience.
-
----
-
-# 8. ROOMS & SUITES
-
-Create an elegant accommodation section.
-
-Heading:
-
-**Stay a little longer.**
-
-Display 3–4 rooms/suites.
-
-Example:
-
-### THE GARDEN SUITE
-
-Private garden · King bed · 62 m²
-
-### THE OCEAN VILLA
-
-Private terrace · Ocean view · 84 m²
-
-### THE HORIZON RESIDENCE
-
-Infinity pool · Panoramic view · 120 m²
-
-Each room should use large editorial photography.
-
-Avoid typical hotel cards.
-
-Instead, create large image-led layouts with text appearing underneath or beside the image.
-
-Hover interaction:
-
-* Image gently zooms
-* Arrow appears
-* Room title shifts slightly
-* Overlay information fades in
-
-Add:
-
-**VIEW ROOM →**
-
----
-
-# 9. ROOM DETAIL INTERACTION
-
-When a user clicks a room, open a detailed view or dedicated route.
-
-Include:
-
-* Large hero image
-* Room name
-* Price per night
-* Gallery
-* Room size
-* Guests
-* Bed type
-* Amenities
-* Description
-* Availability interaction
-* **Reserve your stay** CTA
-
-Create an elegant booking panel.
-
-Example:
-
-```text
-CHECK AVAILABILITY
-
-CHECK-IN
-12 / 09 / 2026
-
-CHECK-OUT
-16 / 09 / 2026
-
-GUESTS
-2 Adults
-
-[ CHECK AVAILABILITY ]
-```
-
-The booking interaction can be frontend-only/mock functionality.
-
----
-
-# 10. DINING SECTION
-
-Create a visually rich restaurant section.
-
-Heading:
-
-**Food worth slowing down for.**
-
-Show:
-
-* Large food photography
-* Restaurant interior
-* Chef/detail image
-* Seasonal menu preview
-
-Use editorial typography.
-
-Example:
-
-```text
-THE TABLE
-
-Local ingredients.
-Seasonal menus.
-Long evenings.
-
-BREAKFAST
-07:00 — 10:30
-
-DINNER
-18:00 — 22:30
-
-[ EXPLORE DINING ]
-```
-
-Add subtle image reveal animations when scrolling.
-
----
-
-# 11. WELLNESS / SPA
-
-Create a calmer section with a darker olive background.
-
-Heading:
-
-**Return to yourself.**
-
-Use atmospheric photography.
-
-Include:
-
-* Massage
-* Meditation
-* Yoga
-* Private wellness rituals
-
-Use subtle floating elements and slow parallax movement.
-
-The transition into this section should feel noticeably different from the rest of the page.
-
----
-
-# 12. DESTINATION / EXPLORE
-
-Create an immersive destination section.
-
-Heading:
-
-**Beyond the retreat.**
-
-Display an interactive large image/map-style composition.
-
-Show experiences such as:
-
-```text
-01 — Hidden Cove
-02 — Mountain Trail
-03 — Sunset Point
-04 — Local Village
-```
-
-When the user hovers over an experience:
-
-* Corresponding image changes
-* Location marker animates
-* Description appears
-
-The section should feel like exploring a travel magazine.
-
----
-
-# 13. JOURNAL
-
-Create a minimal editorial blog section.
-
-Heading:
-
-**From the journal**
-
-Articles:
-
-```text
-THE ART OF DOING NOTHING
-A guide to slow mornings at AURELIA
-
-BEYOND THE HORIZON
-Places worth waking up early for
-
-A TABLE FOR THE SEASON
-Inside our seasonal kitchen
-```
-
-Use large photography and asymmetric layouts.
-
-Hover effects should be subtle.
-
----
-
-# 14. TESTIMONIALS
-
-Avoid generic testimonial cards.
-
-Create a full-width editorial testimonial section.
-
-Large quote:
-
-> “Some places give you a room.
-> AURELIA gives you a memory.”
-
-Show:
-
-**— ELENA MARTIN**
-
-with a small location.
-
-Use a slow fade/slide carousel.
-
----
-
-# 15. FINAL CTA
-
-Create a dramatic final section.
-
-Use a full-screen image.
-
-Text:
-
-**Your next chapter
-starts somewhere quiet.**
-
-Button:
-
-**PLAN YOUR STAY →**
-
-Add subtle image zoom on scroll.
-
----
-
-# 16. FOOTER
-
-Minimal luxury footer.
-
-Include:
-
-```text
-AURELIA
-BOUTIQUE RETREAT
-
-Stay somewhere worth remembering.
-
-EXPLORE
-Stay
-Experience
-Dining
-Journal
-
-CONTACT
-hello@aurelia-retreat.com
-+00 123 456 789
-
-SOCIAL
-Instagram
-Pinterest
-```
-
-Add:
-
-**© 2026 AURELIA**
-
-Keep the footer elegant and spacious.
-
----
-
-# 17. ANIMATION SYSTEM
-
-Animation is extremely important.
-
-Use **Framer Motion** or an equivalent animation library.
-
-Animations should feel premium and restrained.
-
-Implement:
-
-### Page entrance
-
-* Fade
-* Vertical text reveal
-* Image scale animation
-
-### Scroll animations
-
-* Fade-up
-* Image reveal masks
-* Parallax
-* Horizontal scrolling sections
-* Text movement
-
-### Image hover
-
-* Scale 1.03–1.06
-* Smooth transition
-* Overlay reveal
-
-### Buttons
-
-Buttons should have elegant hover transitions.
-
-Example:
-
-```text
-EXPLORE
-────────────
-```
-
-On hover, the underline expands or the arrow moves.
-
-### Cursor
-
-On desktop, create a subtle custom cursor.
-
-When hovering over an image:
-
-```text
-VIEW
-```
-
-appears inside a small circular cursor element.
-
-Do not make the cursor distracting.
-
-### Page transitions
-
-Use smooth transitions between pages.
-
-Avoid excessive animation.
-
-The website should feel **slow, intentional and expensive**.
-
----
-
-# 18. SCROLL EXPERIENCE
-
-The scrolling experience should be one of the highlights of the website.
-
-Use:
-
-* Smooth scrolling
-* Sticky sections where appropriate
-* Parallax images
-* Horizontal scroll galleries
-* Scroll-triggered typography
-* Image masking
-* Section transitions
-
-However, prioritize performance.
-
-Do not add animation simply because it is possible.
-
-Every animation should support the luxury/editorial feeling.
-
----
-
-# 19. RESPONSIVE DESIGN
-
-The website must be fully responsive.
-
-### Desktop
-
-Designed primarily around:
-
-* 1440px
-* 1280px
-* 1024px
-
-### Tablet
-
-Optimize layouts around:
-
-* 768px
-* 834px
-
-### Mobile
-
-Optimize around:
-
-* 390px
-* 375px
-* 360px
-
-On mobile:
-
-* Convert horizontal sections into vertical sections where necessary
-* Reduce excessive typography
-* Preserve visual hierarchy
-* Keep animations smooth
-* Make buttons touch-friendly
-* Simplify navigation
-* Do not simply shrink the desktop layout
-
----
-
-# 20. TECH STACK
-
-Use:
-
-* React
-* Vite
-* Tailwind CSS
-* Framer Motion
-* React Router
-* Lucide React icons
-
-Use reusable components.
-
-Suggested structure:
+##  Project Structure
 
 ```text
 src/
-│
 ├── components/
 │   ├── Navbar.jsx
 │   ├── Hero.jsx
@@ -734,208 +142,75 @@ src/
 └── main.jsx
 ```
 
-Keep content/data separate from UI components.
+Content and data are separated from UI components to keep the application modular and maintainable.
 
----
+##  Getting Started
 
-# 21. CODE QUALITY
+### Prerequisites
 
-The project should look like production-quality frontend work.
+Make sure you have:
 
-Requirements:
+* [Node.js](https://nodejs.org/)
+* npm
 
-* Reusable components
-* Clean folder structure
-* No unnecessary duplicated code
-* Semantic HTML
-* Accessible buttons and links
-* Proper alt text
-* Responsive layouts
-* Loading states where appropriate
-* Proper React state management
-* Clean animation logic
-* No console errors
-* No broken routes
-* No horizontal overflow
-* Optimized images
+### Installation
 
----
+Clone the repository:
 
-# 22. IMAGE DIRECTION
-
-Use high-quality editorial photography.
-
-Images should feel:
-
-* Cinematic
-* Natural
-* Warm
-* Minimal
-* Authentic
-* Architectural
-* Luxury travel editorial
-
-Avoid obvious generic stock photography.
-
-Preferred imagery:
-
-* Architecture
-* Natural landscapes
-* Linen textures
-* Food
-* Pools
-* Mountains/ocean
-* Soft morning light
-* Golden-hour photography
-* Minimal interiors
-* Human details rather than obvious posed models
-
-Use consistent image color grading.
-
----
-
-# 23. UX DETAILS
-
-Add small details that make the website feel premium:
-
-* Scroll progress indicator
-* Active navigation state
-* Image loading transitions
-* Hover states
-* Smooth anchor navigation
-* Back-to-top interaction
-* Booking widget
-* Room filtering
-* Room gallery
-* Date selection
-* Guest selection
-* Toast/confirmation after mock booking
-* Mobile menu animation
-
----
-
-# 24. IMPORTANT DESIGN RULES
-
-Do NOT make this look like:
-
-* A Bootstrap template
-* A generic hotel booking website
-* A dashboard
-* A SaaS landing page
-* A typical WordPress hotel template
-
-Avoid:
-
-* Excessive rounded cards
-* Excessive gradients
-* Excessive glassmorphism
-* Bright colors
-* Generic hero sections
-* Huge collections of cards
-* Excessive icons
-* Stock-template layouts
-
-Instead prioritize:
-
-**Typography + photography + whitespace + composition + motion.**
-
-The website should feel like a **digital luxury travel magazine**.
-
----
-
-# 25. Portfolio-Worthy Details
-
-Because this is a portfolio project, add a few technically impressive touches:
-
-### Interactive room gallery
-
-Clicking a room opens a cinematic gallery.
-
-### Scroll-based image reveal
-
-Images reveal through smooth clipping/masking.
-
-### Horizontal experience section
-
-Desktop users can scroll horizontally through experiences.
-
-### Custom cursor
-
-Desktop-only.
-
-### Smooth page transitions
-
-Use Framer Motion.
-
-### Interactive booking widget
-
-Frontend-only mock booking experience.
-
-### Responsive animation
-
-Animations should adapt or simplify on mobile.
-
----
-
-# 26. Final Quality Target
-
-The final result should feel like a website designed by a **high-end digital design studio**.
-
-The first impression should be:
-
-> "This person knows how to build beautiful digital experiences."
-
-Not:
-
-> "This person made a hotel website."
-
-The website should demonstrate:
-
-* Strong visual design
-* Excellent typography
-* Frontend engineering
-* Responsive design
-* Animation
-* Interaction design
-* UX thinking
-* Component architecture
-* Attention to detail
-
-Build the complete website, not just a landing-page mockup.
-
-Make all major navigation links functional and create realistic placeholder content/data where necessary.
-
-Before finishing, test the entire application for:
-
-* Responsive issues
-* Broken routes
-* Animation glitches
-* Console errors
-* Overflow
-* Mobile navigation
-* Button interactions
-* Booking interactions
-* Image loading
-
-The final result should be polished enough to showcase as a **featured project in a professional developer portfolio**.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/74116097-df4a-4f1c-8b33-350e1fe79e5c).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
+```bash
+git clone <repository-url>
 cd <repository-name>
-npm i
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
+
+The application will be available at the local development URL provided by Vite.
+
+### Deployment
+
+AURELIA is deployed using Vercel.
+
+View Live: https://aurelia-escapes.vercel.app/
+The project is connected to the GitHub repository, allowing updates to be deployed from the main branch.
+
+##  Responsive Design
+
+AURELIA is designed to provide a consistent experience across:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+Layouts, typography, navigation, and animations adapt to smaller screens rather than simply scaling down the desktop design.
+
+##  Interaction & Animation
+
+Motion is used to enhance the experience without overwhelming the interface.
+
+Key interactions include:
+
+* Page entrance animations
+* Image reveal effects
+* Scroll-triggered animations
+* Parallax movement
+* Smooth page transitions
+* Image hover effects
+* Interactive galleries
+* Horizontal desktop experiences
+* Animated mobile navigation
+* Custom cursor interactions on desktop
+
+##  License
+
+This project is intended for portfolio and educational purposes.
