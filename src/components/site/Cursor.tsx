@@ -11,7 +11,7 @@ export function Cursor() {
   const [visible, setVisible] = useState(false);
 
   const x = useMotionValue(-100);
-  const y = useMotionValue(-100);
+  const y = useMotionValue(-100); 
   const sx = useSpring(x, { stiffness: 320, damping: 34, mass: 0.5 });
   const sy = useSpring(y, { stiffness: 320, damping: 34, mass: 0.5 });
 
