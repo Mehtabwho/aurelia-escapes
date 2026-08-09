@@ -126,7 +126,7 @@ function RoomDetail() {
                 <div className="border border-border bg-card p-8 sm:p-10">
                   <p className="eyebrow">From</p>
                   <p className="display mt-3 text-4xl">
-                    €{room.price}
+                    ${room.price}
                     <span className="text-base text-muted-foreground"> / night</span>
                   </p>
                   <div className="mt-8 border-t border-border pt-8">

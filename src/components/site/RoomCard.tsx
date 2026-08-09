@@ -46,7 +46,7 @@ export function RoomCard({ room, index }: { room: Room; index: number }) {
         </h3>
         <p className="mt-4 text-sm text-muted-foreground">{room.summary}</p>
         <p className="mt-6 text-sm text-muted-foreground">
-          From <span className="text-foreground">€{room.price}</span> per night
+          From <span className="text-foreground">${room.price}</span> per night
         </p>
         <Link
           to="/stay/$slug"
