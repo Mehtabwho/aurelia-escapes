@@ -96,7 +96,7 @@ A minimal full-width testimonial section designed to maintain the site's editori
 
 A cinematic closing section encouraging visitors to plan their stay.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **React**
 * **Vite**
@@ -181,6 +181,7 @@ The application will be available at the local development URL provided by Vite.
 AURELIA is deployed using Vercel.
 
 View Live: https://aurelia-escapes.vercel.app/
+
 The project is connected to the GitHub repository, allowing updates to be deployed from the main branch.
 
 ##  Responsive Design
